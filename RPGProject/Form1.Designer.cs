@@ -53,6 +53,7 @@
             Btn_CreateCharacter.TabIndex = 1;
             Btn_CreateCharacter.Text = "Create a Character";
             Btn_CreateCharacter.UseVisualStyleBackColor = true;
+            Btn_CreateCharacter.Click += Btn_CreateCharacter_Click;
             // 
             // Btn_LoadGame
             // 
