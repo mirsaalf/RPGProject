@@ -9,7 +9,8 @@ namespace RPGProject
 
         private void Btn_CreateCharacter_Click(object sender, EventArgs e)
         {
-
+            FormCharacterCreate charcreator = new FormCharacterCreate();
+            charcreator.Show();
         }
     }
 }
