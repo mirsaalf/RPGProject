@@ -6,5 +6,10 @@ namespace RPGProject
         {
             InitializeComponent();
         }
+
+        private void Btn_CreateCharacter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
