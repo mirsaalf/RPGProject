@@ -133,3 +133,18 @@ CREATE TABLE [dbo].[Character](
 	[class] [varchar](255) NOT NULL,
 	PRIMARY KEY ([characterid]));
 GO
+
+/****** Object:  Table [dbo].[Stats] ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Stats](
+	[statsid] [int] NOT NULL,
+	[characterid] [int] NOT NULL,
+	[statname] [varchar](100) NOT NULL,
+	PRIMARY KEY ([statsid]),
+	FOREIGN KEY ([characterid]) REFERENCES Character([characterid]));
+GO
