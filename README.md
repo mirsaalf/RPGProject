@@ -12,4 +12,4 @@ run CreateDatabase.sql
 [Sql Server 2022 Express] (https://www.microsoft.com/en-US/download/details.aspx?id=104781)
 [SQL Server Managment Studio] (https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
-![Static Badge](https://img.shields.io/badge/power_by-.NET-Windows-Forms-blue)
+![Static Badge](https://img.shields.io/badge/power_by-.NET_Windows_Forms-blue)
