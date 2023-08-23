@@ -148,3 +148,18 @@ CREATE TABLE [dbo].[Stats](
 	PRIMARY KEY ([statsid]),
 	FOREIGN KEY ([characterid]) REFERENCES Character([characterid]));
 GO
+
+/****** Object:  Table [dbo].[Saves] ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Saves](
+	[saveid] [int] NOT NULL,
+	[characterid] [int] NOT NULL,
+	[savename] [varchar](255) NOT NULL,
+	PRIMARY KEY ([saveid]),
+	FOREIGN KEY ([characterid]) REFERENCES Character([characterid]));
+GO
