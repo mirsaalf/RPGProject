@@ -116,4 +116,20 @@ GO
 ALTER DATABASE [PRGProject] SET  READ_WRITE 
 GO
 
+USE [PRGProject]
+GO
 
+/****** Object:  Table [dbo].[Character]  ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Character](
+	[characterid] [int] NOT NULL,
+	[name] [varchar](50) NOT NULL,
+	[female] [bit] NOT NULL,
+	[class] [varchar](255) NOT NULL,
+	PRIMARY KEY ([characterid]));
+GO
