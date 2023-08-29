@@ -12,5 +12,11 @@ namespace RPGProject
             FormCharacterCreate charcreator = new FormCharacterCreate();
             charcreator.Show();
         }
+
+        private void Btn_Credits_Click(object sender, EventArgs e)
+        {
+            Credits credits = new Credits();
+            credits.Show();
+        }
     }
 }
