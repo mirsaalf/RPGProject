@@ -39,17 +39,18 @@
             // 
             Lbl_GameTitle.AutoSize = true;
             Lbl_GameTitle.Font = new Font("Perpetua Titling MT", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            Lbl_GameTitle.Location = new Point(27, 9);
+            Lbl_GameTitle.Location = new Point(24, 7);
             Lbl_GameTitle.Name = "Lbl_GameTitle";
-            Lbl_GameTitle.Size = new Size(536, 41);
+            Lbl_GameTitle.Size = new Size(422, 32);
             Lbl_GameTitle.TabIndex = 0;
             Lbl_GameTitle.Text = "RPG Game Title Goes Here";
             // 
             // Btn_CreateCharacter
             // 
-            Btn_CreateCharacter.Location = new Point(27, 159);
+            Btn_CreateCharacter.Location = new Point(24, 119);
+            Btn_CreateCharacter.Margin = new Padding(3, 2, 3, 2);
             Btn_CreateCharacter.Name = "Btn_CreateCharacter";
-            Btn_CreateCharacter.Size = new Size(179, 42);
+            Btn_CreateCharacter.Size = new Size(157, 32);
             Btn_CreateCharacter.TabIndex = 1;
             Btn_CreateCharacter.Text = "Create a Character";
             Btn_CreateCharacter.UseVisualStyleBackColor = true;
@@ -57,41 +58,46 @@
             // 
             // Btn_LoadGame
             // 
-            Btn_LoadGame.Location = new Point(233, 159);
+            Btn_LoadGame.Location = new Point(204, 119);
+            Btn_LoadGame.Margin = new Padding(3, 2, 3, 2);
             Btn_LoadGame.Name = "Btn_LoadGame";
-            Btn_LoadGame.Size = new Size(179, 42);
+            Btn_LoadGame.Size = new Size(157, 32);
             Btn_LoadGame.TabIndex = 2;
             Btn_LoadGame.Text = "Load Game";
             Btn_LoadGame.UseVisualStyleBackColor = true;
             // 
             // Btn_GameStats
             // 
-            Btn_GameStats.Location = new Point(27, 219);
+            Btn_GameStats.Location = new Point(24, 164);
+            Btn_GameStats.Margin = new Padding(3, 2, 3, 2);
             Btn_GameStats.Name = "Btn_GameStats";
-            Btn_GameStats.Size = new Size(179, 42);
+            Btn_GameStats.Size = new Size(157, 32);
             Btn_GameStats.TabIndex = 3;
             Btn_GameStats.Text = "Stats";
             Btn_GameStats.UseVisualStyleBackColor = true;
             // 
             // Btn_Credits
             // 
-            Btn_Credits.Location = new Point(233, 219);
+            Btn_Credits.Location = new Point(204, 164);
+            Btn_Credits.Margin = new Padding(3, 2, 3, 2);
             Btn_Credits.Name = "Btn_Credits";
-            Btn_Credits.Size = new Size(179, 42);
+            Btn_Credits.Size = new Size(157, 32);
             Btn_Credits.TabIndex = 4;
             Btn_Credits.Text = "Credits";
             Btn_Credits.UseVisualStyleBackColor = true;
+            Btn_Credits.Click += Btn_Credits_Click;
             // 
             // Form_Menu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(587, 309);
+            ClientSize = new Size(514, 232);
             Controls.Add(Btn_Credits);
             Controls.Add(Btn_GameStats);
             Controls.Add(Btn_LoadGame);
             Controls.Add(Btn_CreateCharacter);
             Controls.Add(Lbl_GameTitle);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form_Menu";
             Text = "RPG Main Menu";
             ResumeLayout(false);

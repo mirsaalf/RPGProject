@@ -129,6 +129,12 @@ GO
 CREATE TABLE [dbo].[Class](
 	[classid] [int] IDENTITY(1,1) NOT NULL,
 	[classname] [varchar](50) NOT NULL,
+	[str_min] int NOT NULL,
+	[dex_min] int NOT NULL,
+	[con_min] int NOT NULL,
+	[int_min] int NOT NULL,
+	[wis_min] int NOT NULL,
+	[cha_min] int NOT NULL
  CONSTRAINT [PK_Class] PRIMARY KEY CLUSTERED 
 (
 	[classid] ASC
@@ -155,6 +161,30 @@ CREATE TABLE [dbo].[Character](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 	
+GO
+
+/****** Object:  Table [dbo].[CharacterStats] ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CharacterStats](
+	[char_stats_id] [int] IDENTITY(1,1) NOT NULL,
+	[charid] [int] NOT NULL,
+	[strength] [int] NOT NULL,
+	[dexterity] [int] NOT NULL,
+	[constitution] [int] NOT NULL,
+	[intelligence] [int] NOT NULL,
+	[wisdom] [int] NOT NULL,
+	[charisma] [int] NOT NULL,
+	FOREIGN KEY ([charid]) REFERENCES Character([charid]),
+    CONSTRAINT [PK_CharStats] PRIMARY KEY CLUSTERED 	
+(
+	[char_stats_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
 GO
 
 /****** Object:  Table [dbo].[Stats] ******/
@@ -196,10 +226,9 @@ CREATE TABLE [dbo].[Saves](
 GO
 
 /******* insert classes **********/
-INSERT INTO Class (classname) VALUES ('Warrior')
-INSERT INTO Class (classname) VALUES ('Mage')
-INSERT INTO Class (classname) VALUES ('Cleric')
-INSERT INTO Class (classname) VALUES ('Bard')
-INSERT INTO Class (classname) VALUES ('Hunter')
-INSERT INTO Class (classname) VALUES ('Ranger')
-INSERT INTO Class (classname) VALUES ('Battle Mage')
+INSERT INTO Class (classname, str_min, dex_min, con_min, int_min, wis_min, cha_min) VALUES ('Warrior', 12, 6, 10, 6, 6, 6)
+INSERT INTO Class (classname, str_min, dex_min, con_min, int_min, wis_min, cha_min) VALUES ('Mage', 6, 6, 8, 12, 6, 6)
+INSERT INTO Class (classname, str_min, dex_min, con_min, int_min, wis_min, cha_min) VALUES ('Cleric', 6, 8, 10, 10, 6, 6)
+INSERT INTO Class (classname, str_min, dex_min, con_min, int_min, wis_min, cha_min) VALUES ('Bard', 6, 8, 8, 8, 8, 8)
+INSERT INTO Class (classname, str_min, dex_min, con_min, int_min, wis_min, cha_min) VALUES ('Hunter', 6, 8, 8, 8, 10, 10)
+INSERT INTO Class (classname, str_min, dex_min, con_min, int_min, wis_min, cha_min) VALUES ('Thief', 6, 10, 10, 6, 12, 6)
